@@ -32,6 +32,7 @@
     "shower-ribbon": "^2.1.0"
   },
   "devDependencies": {
+    "jekyll": "^3.0.0-beta1",
     "browser-sync": "^2.18.12",
     "del": "^3.0.0",
     "gh-pages": "^1.1.0",
