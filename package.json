@@ -46,10 +46,11 @@
     "run-sequence": "^2.1.0"
   },
   "scripts": {
-    "start": "jekyll build && mv _site/init.html index.html && gulp",
-    "prepare": "gulp prepare",
+    "jekyll": "jekyll build && mv _site/init.html index.html",
+    "start": "npm run jekyll && gulp",
+    "prepare": "npm run jekyll && gulp prepare",
     "archive": "gulp archive",
-    "publish": "gulp publish",
+    "publish": "npm run jekyll && gulp publish",
     "test": "npm run prepare && ls prepared && npm run archive && path-exists archive.zip"
   }
 }
