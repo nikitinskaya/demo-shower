@@ -45,7 +45,7 @@
     "run-sequence": "^2.1.0"
   },
   "scripts": {
-    "start": "jekyll build && mv _site/index.html index.html && gulp",
+    "start": "jekyll build && mv _site/init.html index.html && gulp",
     "prepare": "gulp prepare",
     "archive": "gulp archive",
     "publish": "gulp publish",
