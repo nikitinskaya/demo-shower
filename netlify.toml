@@ -1,4 +1,4 @@
 [build]
   publish = "prepared"
-  command = "npm run prepare"
+  command = "npm i -g jekyll && npm run prepare"
 
