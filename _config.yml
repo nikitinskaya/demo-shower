@@ -1,0 +1,2 @@
+name: My Jekyll Website
+exclude: [docs, node_modules, pictures, prepared, CONTRIBUTING.md, gulpfile.js, init.html, LICENSE.md, netlify.toml, package-lock.json, package.json, README.md]
