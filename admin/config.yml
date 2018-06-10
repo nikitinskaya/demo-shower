@@ -22,7 +22,7 @@ collections:
     files:
       - label: "Global"
         name: "global"
-        file: "_settings/global.yml"
+        file: "_data/global.yml"
         fields:
         - {label: Title, name: title, widget: string}
 
