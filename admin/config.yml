@@ -17,3 +17,13 @@ collections:
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "settings"
+    label: "Settings"
+    files:
+      - label: "Global"
+        name: "global"
+        file: "_settings/global.yml"
+        fields:
+        - {label: Title, name: title, widget: string}
+
+
