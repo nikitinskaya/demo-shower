@@ -21,6 +21,10 @@ collections:
         name: "image"
         widget: "image"
         required: false
+      - label: "Make image cover full slide"
+        name: image-cover
+        widget: boolean
+        required: false
       - label: "Shout"
         name: "shout"
         widget: "string"
@@ -33,6 +37,7 @@ collections:
       - label: "Citation"
         name: "quote"
         widget: object
+        required: false
         fields:
           - {label: "Quote text", name: quote-text, widget: string, required: false}
           - {label: "Quote author", name: quote-author, widget: string, required: false}
