@@ -26,7 +26,8 @@ layout: default
 		</style>
 	</section>
 
-  {% for slide in site.slides %}
+  {% assign sorted_slides = site.slides | sort:"number" %}
+  {% for slide in sorted_slides %}
     <section class="slide">
       <h2>{{ slide.title }}</h2>
       <p>{{ slide.content }}</p>
