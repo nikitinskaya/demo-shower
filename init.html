@@ -78,6 +78,16 @@ layout: default
           {% endif %}
         {% endif %}
 
+        {% if slide.quote %}
+          <figure>
+            <blockquote>
+              <p>{{ slide.quote.quote-text }}</p>
+            </blockquote>
+            {% if slide.quote.quote-author %}
+              <figcaption>{{ slide.quote.quote-author }}</figcaption>
+            {% endif %}
+          </figure>
+        {% endif %}
 
         {% if slide.note %}
            <p class="note">{{ slide.note }}</p>
