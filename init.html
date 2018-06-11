@@ -9,33 +9,29 @@ layout: default
 	</header>
 
 	<section class="slide" id="cover">
-		<h2>Shower Presentation Engine</h2>
-		<p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
-		<figure>
-			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
-			<figcaption class="white">
-				<a href="http://fiftyfootshadows.net/">© John Carey</a>
-			</figcaption>
-		</figure>
+		<h2>{{ site.data.title-slide.title }}</h2>
+		<p>{{ site.data.title-slide.text }}</p>
 		<style>
 			#cover h2 {
-				margin:30px 0 0;
-				color:#FFF;
+				margin: 100px 0 0;
 				text-align:center;
 				font-size:70px;
 				}
 			#cover p {
 				margin:10px 0 0;
 				text-align:center;
-				color:#FFF;
 				font-style:italic;
 				font-size:20px;
 				}
-				#cover p a {
-					color:#FFF;
-					}
 		</style>
 	</section>
+
+  {% for slide in site.slides %}
+    <section class="slide">
+      <h2>{{ slide.title }}</h2>
+      <p>{{ slide.content }}</p>
+    </section>
+  {% endfor %}
 
 	<section class="slide">
 		<h2>Shower key features</h2>
