@@ -12,7 +12,7 @@ collections:
     slug: "{{day}}{{hour}}{{minute}}{{second}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Slide Number", name: "number", widget: "number", valueType: "int"}
+      - {label: "Slide Number", name: "number", widget: "number", default: 0, valueType: "int"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "settings"
     label: "Settings"

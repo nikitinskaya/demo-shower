@@ -31,7 +31,10 @@ layout: default
     {% else %}
       <section class="slide">
         <h2>{{ slide.title }}</h2>
-        <p>{{ slide.content }}</p>
+          {{ slide.content }}
+         {% if slide.note %}
+           <p class="note">{{ slide.note }}</p>
+        {% endif %}
       </section>
     {% endif %}
   {% endfor %}
