@@ -29,5 +29,11 @@ collections:
         - {label: Caption subtitle, name: subtitle, widget: string}
         - {label: Mode, name: mode, widget: select, options: ["list", "full"]}
         - {label: Progress Bar, name: progress, widget: boolean}
-
+        - label: "Badge"
+          name: badge
+          widget: "object"
+          fields:
+            - {label: "Show badge", name: badge-show, widget: boolean}
+            - {label: "Badge text", name: "badge-text", widget: "string"}
+            - {label: "Badge link", name: "badge-link", widget: "string"}
 

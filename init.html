@@ -166,10 +166,13 @@ layout: default
 		</ol>
 	</section>
 
-
-	<footer class="badge">
-		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
-	</footer>
+  {% if site.data.global.badge.badge-show == true %}
+  	<footer class="badge">
+  		<a href="{{ site.data.global.badge.badge-link }}">
+        {{ site.data.global.badge.badge-text }}
+      </a>
+  	</footer>
+  {% endif %}
 
   {% if site.data.global.progress == true %}
 	  <div class="progress"></div>

@@ -3,3 +3,7 @@ subtitle: Yours Truly, Famous Inc.
 progress: false
 lang: ru
 mode: full
+badge:
+  badge-link: 'https://github.com/shower/shower'
+  badge-show: true
+  badge-text: Fork me on GitHub
