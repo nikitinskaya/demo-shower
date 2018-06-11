@@ -12,8 +12,15 @@ collections:
     slug: "{{day}}{{hour}}{{minute}}{{second}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Slide Number", name: "number", widget: "number", default: 0, valueType: "int"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Slide Number"
+        name: "number"
+        widget: "number"
+        default: 0
+        valueType: "int"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        required: false
   - name: "settings"
     label: "Settings"
     files:
@@ -21,9 +28,19 @@ collections:
         name: "global"
         file: "_data/global.yml"
         fields:
-        - {label: Language, name: lang, widget: select, options: ["en", "ru"]}
-        - {label: Caption title, name: title, widget: string}
-        - {label: Caption subtitle, name: subtitle, widget: string}
+        - label: Language
+          name: lang
+          widget: select
+          options: ["en", "ru"]
+          required: false
+        - label: Caption title
+          name: title
+          widget: string
+          required: false
+        - label: Caption subtitle
+          name: subtitle
+          widget: string
+          required: false
         - {label: Mode, name: mode, widget: select, options: ["list", "full"]}
         - {label: Progress Bar, name: progress, widget: boolean}
         - label: "Badge"
@@ -31,6 +48,12 @@ collections:
           widget: "object"
           fields:
             - {label: "Show badge", name: badge-show, widget: boolean}
-            - {label: "Badge text", name: "badge-text", widget: "string"}
-            - {label: "Badge link", name: "badge-link", widget: "string"}
+            - label: "Badge text"
+              name: "badge-text"
+              widget: "string"
+              required: false
+            - label: "Badge link"
+              name: "badge-link"
+              widget: "string"
+              required: false
 
