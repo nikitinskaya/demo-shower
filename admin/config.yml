@@ -25,5 +25,7 @@ collections:
         file: "_data/global.yml"
         fields:
         - {label: Title, name: title, widget: string}
+        - {label: Subtitle, name: subtitle, widget: string}
+        - {label: Progress Bar, name: progress, widget: boolean}
 
 
