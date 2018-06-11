@@ -46,21 +46,25 @@ layout: default
 
     {% else %}
       <section class="slide slide{{ forloop.index }}">
-        <h2>{{ slide.title }}</h2>
-
-        {% if slide.double == true %}
-          <p class="double">
-            {{ slide.content | strip_html}}
-          </p>
-        {% else %}
-          {{ slide.content }}
+        {% if slide.shout %}
+          <h2 class="shout">{{ slide.shout }}</h2>
+          {% else %}
+            <h2>{{ slide.title }}</h2>
+            {% if slide.double == true %}
+              <p class="double">
+                {{ slide.content | strip_html}}
+              </p>
+            {% else %}
+              {{ slide.content }}
+          {% endif %}
         {% endif %}
 
         {% if slide.white-text == true %}
         <style>
           .slide{{ forloop.index }} h2,
           .slide{{ forloop.index }} p,
-          .slide{{ forloop.index }} a {
+          .slide{{ forloop.index }} a,
+          .slide{{ forloop.index }} figcaption {
             color: #fff;
           }
         </style>
@@ -73,6 +77,7 @@ layout: default
               <img src="{{ slide.image }}" class="place" style="max-height:50%;margin-top:80px"></img>
           {% endif %}
         {% endif %}
+
 
         {% if slide.note %}
            <p class="note">{{ slide.note }}</p>

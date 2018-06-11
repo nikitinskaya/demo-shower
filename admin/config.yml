@@ -21,6 +21,15 @@ collections:
         name: "image"
         widget: "image"
         required: false
+      - label: "Shout"
+        name: "shout"
+        widget: "string"
+        required: false
+      - label: "Make slide text white"
+        name: "white-text"
+        widget: "boolean"
+        default: false
+        required: false
       - label: "Body"
         name: "body"
         widget: "markdown"
