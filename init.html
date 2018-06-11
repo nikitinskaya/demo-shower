@@ -8,30 +8,32 @@ layout: default
 		<p>{{ site.data.global.subtitle }}</p>
 	</header>
 
-	<section class="slide" id="cover">
-		<h2>{{ site.data.title-slide.title }}</h2>
-		<p>{{ site.data.title-slide.text }}</p>
-		<style>
-			#cover h2 {
-				margin: 100px 0 0;
-				text-align:center;
-				font-size:70px;
-				}
-			#cover p {
-				margin:10px 0 0;
-				text-align:center;
-				font-style:italic;
-				font-size:20px;
-				}
-		</style>
-	</section>
-
   {% assign sorted_slides = site.slides | sort:"number" %}
   {% for slide in sorted_slides %}
-    <section class="slide">
-      <h2>{{ slide.title }}</h2>
-      <p>{{ slide.content }}</p>
-    </section>
+    {% if slide.number == 1 %}
+      <section class="slide" id="cover">
+        <h2>{{ slide.title }}</h2>
+        <p>{{ slide.content }}</p>
+          <style>
+          #cover h2 {
+            margin: 100px 0 0;
+            text-align:center;
+            font-size:70px;
+            }
+          #cover p {
+            margin:10px 0 0;
+            text-align:center;
+            font-style:italic;
+            font-size:20px;
+            }
+        </style>
+      </section>
+    {% else %}
+      <section class="slide">
+        <h2>{{ slide.title }}</h2>
+        <p>{{ slide.content }}</p>
+      </section>
+    {% endif %}
   {% endfor %}
 
 	<section class="slide">

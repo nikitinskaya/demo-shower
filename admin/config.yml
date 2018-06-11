@@ -7,11 +7,12 @@ media_folder: "pictures"
 collections:
   - name: "slides" # Used in routes, e.g., /admin/collections/blog
     label: "Slides" # Used in the UI
-    folder: "_slides/" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    folder: "_slides/"
+    create: true
+    slug: "{{day}}{{hour}}{{minute}}{{second}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slide Number", name: "number", widget: "number", valueType: "int"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "settings"
     label: "Settings"

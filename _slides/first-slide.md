@@ -1,5 +1,5 @@
 ---
-title: First Slide
-number: 3
+title: Shower Presentation Engine
+number: 1
 ---
-Content
+Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a>
