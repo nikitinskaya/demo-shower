@@ -27,6 +27,7 @@ collections:
         - {label: Language, name: lang, widget: select, options: ["en", "ru"]}
         - {label: Title, name: title, widget: string}
         - {label: Subtitle, name: subtitle, widget: string}
+        - {label: Mode, name: mode, widget: select, options: ["list", "full"]}
         - {label: Progress Bar, name: progress, widget: boolean}
 
 
