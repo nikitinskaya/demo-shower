@@ -14,7 +14,15 @@ layout: default
       <section class="slide" id="cover">
         <h2>{{ slide.title }}</h2>
         <p>{{ slide.content }}</p>
-          <style>
+
+        {% if slide.image %}
+          {% if slide.image-cover == true %}
+            <img src="{{ slide.image }}" class="cover"></img>
+            {% else %}
+              <img src="{{ slide.image }}" class="place" style="max-height:40%;margin-top:160px"></img>
+          {% endif %}
+        {% endif %}
+        <style>
           #cover h2 {
             margin: 100px 0 0;
             text-align:center;
@@ -26,11 +34,20 @@ layout: default
             font-style:italic;
             font-size:20px;
             }
+          {% if slide.white-text == true %}
+            #cover h2,
+            #cover p,
+            #cover a {
+              color: #fff;
+            }
+          {% endif %}
         </style>
       </section>
+
     {% else %}
-      <section class="slide">
+      <section class="slide slide{{ forloop.index }}">
         <h2>{{ slide.title }}</h2>
+
         {% if slide.double == true %}
           <p class="double">
             {{ slide.content | strip_html}}
@@ -38,6 +55,25 @@ layout: default
         {% else %}
           {{ slide.content }}
         {% endif %}
+
+        {% if slide.white-text == true %}
+        <style>
+          .slide{{ forloop.index }} h2,
+          .slide{{ forloop.index }} p,
+          .slide{{ forloop.index }} a {
+            color: #fff;
+          }
+        </style>
+        {% endif %}
+
+        {% if slide.image %}
+          {% if slide.image-cover == true %}
+            <img src="{{ slide.image }}" class="cover"></img>
+            {% else %}
+              <img src="{{ slide.image }}" class="place" style="max-height:50%;margin-top:80px"></img>
+          {% endif %}
+        {% endif %}
+
         {% if slide.note %}
            <p class="note">{{ slide.note }}</p>
         {% endif %}
