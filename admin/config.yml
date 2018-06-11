@@ -30,6 +30,12 @@ collections:
         widget: "boolean"
         default: false
         required: false
+      - label: "Citation"
+        name: "quote"
+        widget: object
+        fields:
+          - {label: "Quote text", name: quote-text, widget: string, required: false}
+          - {label: "Quote author", name: quote-author, widget: string, required: false}
       - label: "Body"
         name: "body"
         widget: "markdown"
