@@ -50,6 +50,10 @@ collections:
         name: "body"
         widget: "markdown"
         required: false
+      - label: "Note"
+        name: "note"
+        widget: "string"
+        required: false
   - name: "settings"
     label: "Settings"
     files:
