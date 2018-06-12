@@ -17,22 +17,27 @@ collections:
         widget: "number"
         default: 0
         valueType: "int"
-      - label: "Image"
-        name: "image"
-        widget: "image"
+      - label: "Image settiings"
+        name: "image-settings"
+        widget: "object"
         required: false
-      - label: "Make image cover full slide"
-        name: image-cover
-        widget: boolean
-        required: false
+        fields:
+        - label: "Image"
+          name: "image"
+          widget: "image"
+          required: false
+        - label: "Make image cover full slide"
+          name: image-cover
+          widget: boolean
+          required: false
+        - label: "Make slide text white"
+          name: "white-text"
+          widget: "boolean"
+          default: false
+          required: false
       - label: "Shout"
         name: "shout"
         widget: "string"
-        required: false
-      - label: "Make slide text white"
-        name: "white-text"
-        widget: "boolean"
-        default: false
         required: false
       - label: "Citation"
         name: "quote"

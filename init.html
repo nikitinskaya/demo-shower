@@ -15,8 +15,8 @@ layout: default
         <h2>{{ slide.title }}</h2>
         <p>{{ slide.content }}</p>
 
-        {% if slide.image %}
-          {% if slide.image-cover == true %}
+        {% if slide.image-settings.image %}
+          {% if slide.image-settings.image-cover == true %}
             <img src="{{ slide.image }}" class="cover"></img>
             {% else %}
               <img src="{{ slide.image }}" class="place" style="max-height:40%;margin-top:160px"></img>
@@ -34,7 +34,7 @@ layout: default
             font-style:italic;
             font-size:20px;
             }
-          {% if slide.white-text == true %}
+          {% if slide.image-settings.white-text == true %}
             #cover h2,
             #cover p,
             #cover a {
@@ -59,7 +59,7 @@ layout: default
           {% endif %}
         {% endif %}
 
-        {% if slide.white-text == true %}
+        {% if slide.image-settings.white-text == true %}
         <style>
           .slide{{ forloop.index }} h2,
           .slide{{ forloop.index }} p,
@@ -70,8 +70,8 @@ layout: default
         </style>
         {% endif %}
 
-        {% if slide.image %}
-          {% if slide.image-cover == true %}
+        {% if slide.image-settings.image %}
+          {% if slide.image-settings.image-cover == true %}
             <img src="{{ slide.image }}" class="cover"></img>
             {% else %}
               <img src="{{ slide.image }}" class="place" style="max-height:50%;margin-top:80px"></img>
