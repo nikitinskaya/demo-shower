@@ -1,9 +1,9 @@
-title: Shower Presentation Engine
-subtitle: Yours Truly, Famous Inc.
-progress: true
 lang: en
+title: ''
+subtitle: ''
 mode: list
+progress: false
 badge:
   badge-link: 'https://github.com/shower/shower'
-  badge-show: true
+  badge-show: false
   badge-text: Fork me on GitHub
