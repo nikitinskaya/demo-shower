@@ -47,7 +47,7 @@ layout: default
     {% else %}
       <section class="slide slide{{ forloop.index }}">
         {% if slide.shout %}
-          <h2 class="shout">{{ slide.shout }}</h2>
+          <h2 class="shout shrink">{{ slide.shout }}</h2>
           {% else %}
             <h2>{{ slide.title }}</h2>
             {% if slide.double == true %}
