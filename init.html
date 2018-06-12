@@ -17,9 +17,9 @@ layout: default
 
         {% if slide.image-settings.image %}
           {% if slide.image-settings.image-cover == true %}
-            <img src="{{ slide.image }}" class="cover"></img>
+            <img src="{{ slide.image-settings.image }}" class="cover"></img>
             {% else %}
-              <img src="{{ slide.image }}" class="place" style="max-height:40%;margin-top:160px"></img>
+              <img src="{{ slide.image-settings.image }}" class="place" style="max-height:40%;margin-top:160px"></img>
           {% endif %}
         {% endif %}
         <style>
@@ -72,9 +72,9 @@ layout: default
 
         {% if slide.image-settings.image %}
           {% if slide.image-settings.image-cover == true %}
-            <img src="{{ slide.image }}" class="cover"></img>
+            <img src="{{ slide.image-settings.image }}" class="cover"></img>
             {% else %}
-              <img src="{{ slide.image }}" class="place" style="max-height:50%;margin-top:80px"></img>
+              <img src="{{ slide.image-settings.image }}" class="place" style="max-height:50%;margin-top:80px"></img>
           {% endif %}
         {% endif %}
 
