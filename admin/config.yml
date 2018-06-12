@@ -46,6 +46,11 @@ collections:
         fields:
           - {label: "Quote text", name: quote-text, widget: string, required: false}
           - {label: "Quote author", name: quote-author, widget: string, required: false}
+      - label: "Double column text"
+        name: "double"
+        widget: "boolean"
+        default: false
+        required: false
       - label: "Body"
         name: "body"
         widget: "markdown"
